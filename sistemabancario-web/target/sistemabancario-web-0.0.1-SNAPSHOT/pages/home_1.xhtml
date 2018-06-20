@@ -1,0 +1,56 @@
+	<html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:c="http://java.sun.com/jsp/jstl/core">  
+  
+    <h:head>  
+  		<h:outputStylesheet library="css" name="sb.css"/>
+    </h:head>  
+      
+    <h:body>   
+    
+    	
+<h:form>
+			<h:panelGrid columns="2" style="width: 100%" >
+				<p:panel header="Usuarios">
+					<h:panelGrid columns="2" style="width: 100%">
+											
+						<h:panelGrid columns="2">
+							<p:outputLabel value="Nombre: "/>
+							<p:outputLabel value="#{loginBeanFaces.saludo}"/>							
+							
+							<p:commandButton id="btnSaludar" value="Saludar" action="#{loginBeanFaces.saludar}" style="float:right"/>   
+							
+								 
+	<p:dataTable id="tablaDinamica" var="registro" value="#{loginBeanFaces.tabla}">
+			                     
+				         			                         
+				        <p:column headerText="ID">
+				            <h:outputText value="#{registro.id}" />
+				        </p:column>
+				 
+				        <p:column headerText="NOMBRE">
+				            <h:outputText value="#{registro.user}" />
+				        </p:column>
+				        
+				        <p:column headerText="APELLIDO">
+				            <h:outputText value="#{registro.name}" />
+				        </p:column>
+				        
+				        
+				    </p:dataTable>		
+							
+						</h:panelGrid>
+					</h:panelGrid>
+				</p:panel>		
+			</h:panelGrid>
+	</h:form>				
+
+
+<p:spinner />
+
+
+    </h:body>  
+</html>  

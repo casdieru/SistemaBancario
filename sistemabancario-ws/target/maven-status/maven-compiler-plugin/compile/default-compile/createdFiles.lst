@@ -1,0 +1,14 @@
+net\tecgurus\sistemabancario_ws\model\Tipocuenta.class
+net\tecgurus\sistemabancario_ws\model\Login.class
+net\tecgurus\sistemabancario_ws\model\Movimiento.class
+net\tecgurus\sistemabancario_ws\services\LoginService.class
+net\tecgurus\sistemabancario_ws\model\Cuenta.class
+net\tecgurus\sistemabancario_ws\services\BancoService.class
+net\tecgurus\sistemabancario_ws\services\UsuarioService.class
+net\tecgurus\sistemabancario_ws\beans\Usuario.class
+net\tecgurus\sistemabancario_ws\beans\Banco.class
+net\tecgurus\sistemabancario_ws\model\Banco.class
+net\tecgurus\sistemabancario_ws\model\Cliente.class
+net\tecgurus\sistemabancario_ws\model\Tipomovimiento.class
+net\tecgurus\sistemabancario_ws\model\Perfil.class
+net\tecgurus\sistemabancario_ws\webservices\CatalogoWS.class

@@ -1,0 +1,9 @@
+net\tecgurus\sistemabancarioweb\bean\LoginBean.class
+net\tecgurus\sistemabancarioweb\bean\LoginBeanFaces.class
+net\tecgurus\sistemabancarioweb\ControllerServlet.class
+net\tecgurus\sistemabancarioweb\bean\BancosBean.class
+net\tecgurus\sistemabancarioweb\bean\Login.class
+net\tecgurus\sistemabancarioweb\services\TestService.class
+net\tecgurus\sistemabancarioweb\services\LoginServices.class
+net\tecgurus\sistemabancarioweb\bean\UsuariosBean.class
+net\tecgurus\sistemabancarioweb\services\CatalogosService.class

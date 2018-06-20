@@ -1,0 +1,12 @@
+net\tecgurus\sistemabancario\ws\client\Login.class
+net\tecgurus\sistemabancario\ws\client\ObjectFactory.class
+net\tecgurus\sistemabancario\ws\client\GetUsuariosByExampleResponse.class
+net\tecgurus\sistemabancario\ws\client\GetBancosByExample.class
+net\tecgurus\sistemabancario\ws\client\Banco.class
+net\tecgurus\sistemabancario\ws\client\GetBancosByExampleResponse.class
+net\tecgurus\sistemabancario\ws\client\LoginResponse.class
+net\tecgurus\sistemabancario\ws\client\package-info.class
+net\tecgurus\sistemabancario\ws\client\Usuario.class
+net\tecgurus\sistemabancario\ws\client\CatalogoWSService.class
+net\tecgurus\sistemabancario\ws\client\CatalogoWS.class
+net\tecgurus\sistemabancario\ws\client\GetUsuariosByExample.class

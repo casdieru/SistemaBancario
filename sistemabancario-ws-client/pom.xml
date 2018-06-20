@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.tecgurus</groupId>
+    <artifactId>sistemabancario-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>sistemabancario-ws-client</artifactId>
+  <name>sistemabancario-ws-client</name>
+  
+  <!-- Client geenration -->
+  
+	<properties>
+		<!-- change this URL by the WSDL used -->
+		<baseWsdlUrl>http://localhost:8080/sistemabancario-ws/catalogoWS?wsdl</baseWsdlUrl>
+		<!-- package for the generated class, change this package for the desired -->
+		<basepackage>net.tecgurus.sistemabancario.ws.client</basepackage>
+	</properties>
+
+<!-- 	<build> -->
+<!-- 		<finalName>sistemabancario-ws-client</finalName> -->
+<!-- 		<plugins> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-compiler-plugin</artifactId> -->
+<!-- 				<version>3.2</version> -->
+<!-- 				<configuration> -->
+<!-- 					<source>1.7</source> -->
+<!-- 					<target>1.7</target> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
+
+			
+
+<!-- 	<plugin> -->
+<!--   <groupId>org.codehaus.mojo</groupId> -->
+<!--   <artifactId>jaxws-maven-plugin</artifactId> -->
+<!--   <version>2.4.1</version> -->
+<!--   <executions> -->
+<!--     <execution> -->
+<!--       <id>clientGeneration</id> -->
+<!--       <goals> -->
+<!--         <goal>wsimport</goal> -->
+<!--       </goals> -->
+<!--       <configuration> -->
+<!--       <wsdlUrls> -->
+<!--       <wsdlUrl>http://localhost:8080/sistemabancario-ws/catalogoWS?wsdl</wsdlUrl> -->
+<!--       </wsdlUrls>         -->
+        
+<!--         <packageName>net.tecgurus.sistemabancario.ws.client</packageName> -->
+<!--         <vmArgs> -->
+<!--            <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg> -->
+<!--         </vmArgs> -->
+<!--       </configuration> -->
+<!--    </execution> -->
+<!--  </executions> -->
+<!-- </plugin> -->
+	
+
+<!-- 		</plugins> -->
+
+			
+
+<!-- 	</build> -->
+  
+</project>

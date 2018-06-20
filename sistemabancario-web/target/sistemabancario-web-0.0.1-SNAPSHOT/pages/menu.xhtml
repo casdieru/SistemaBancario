@@ -1,0 +1,67 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	<h:form>
+		<p:menubar id="menu">
+			<p:menuitem value="Home" icon="fa fa-home"
+				url="${pageContext.request.contextPath}/pages/home.xhtml" />
+			<p:submenu label="Administración" icon="fa fa-users">
+				<p:submenu label="Catálogos" icon="ui-icon-contact">
+					<p:menuitem value="Usuarios" url="${pageContext.request.contextPath}/pages/usuarios.xhtml" />
+					<p:menuitem value="Bancos" url="${pageContext.request.contextPath}/pages/bancos.xhtml" />
+					<p:menuitem value="Clientes" url="#" />
+					<p:menuitem value="Cuentas" url="#" />
+					<p:menuitem value="Tipo de Cuentas" url="#" />
+					<p:menuitem value="Perfiles" url="#" />
+					<p:menuitem value="Tipo de Movimientos" url="#" />
+				</p:submenu>
+			</p:submenu>
+			<p:menuitem value="Ubicación" icon="fa fa-globe"
+				url="${pageContext.request.contextPath}/pages/ubicacion.xhtml" />
+			<p:submenu label="Mi Perfíl" icon="fa fa-user">
+				<p:menuitem value="Cambiar Contraseña"
+					onclick="PF('dlgCambiarContrasenia').show();"
+					icon="fa fa-user-secret" />
+			</p:submenu>
+			<f:facet name="options">
+				<p:commandButton id="btnCerrarSesion" immediate="true"
+					value="Cerrar Sesión" action="#{login.cerrarSesion}"
+					icon="fa fa-close" />
+			</f:facet>
+		</p:menubar>
+		<p:sticky target="menu" />
+	</h:form>
+	<p:dialog widgetVar="dlgCambiarContrasenia" header="Cambiar Contraseña"
+		modal="true" closable="false" resizable="false">
+		<h:form>
+			<h:panelGrid columns="3">
+				<p:outputLabel value="Nueva Contraseña: " for="txtNuevaContrasenia" />
+				<p:password id="txtNuevaContrasenia"
+					value="#{usuarioBean.nuevoPassword}" required="true"
+					requiredMessage="Ingresa la nueva contraseña">
+					<p:ajax event="blur"
+						update="txtNuevaContrasenia, messageNuevaContrasenia" />
+				</p:password>
+				<p:message id="messageNuevaContrasenia" for="txtNuevaContrasenia"
+					display="true" />
+				<p:outputLabel value="Confirmar Contraseña: "
+					for="txtConfirmarContrasenia" />
+				<p:password id="txtConfirmarContrasenia"
+					value="#{usuarioBean.confirmarPassword}">
+					<p:ajax
+						update="txtConfirmarContrasenia messageConfirmarContrasenia" />
+				</p:password>
+				<p:message id="messageConfirmarContrasenia"
+					for="txtConfirmarContrasenia" display="true" />
+			</h:panelGrid>
+		</h:form>
+		<p:commandButton id="btnCancelarPassword" value="Cancelar"
+			onclick="PF('dlgCambiarContrasenia').hide();" style="float: right" />
+		<p:commandButton id="btnCambiarPassword" value="Guardar"
+			style="float: right" />
+	</p:dialog>
+</ui:composition>
